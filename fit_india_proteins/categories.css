@@ -1,0 +1,67 @@
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.productcard{
+    width: 300px;
+    padding:11px;
+    background-color: rgb(230, 220, 220);
+    margin-inline: 80px;
+    margin-top: 24px;
+    color: black;
+    cursor: pointer;
+}
+.productcard img{
+    width: 100%;
+
+}
+.productcard p{
+    padding: 7px;
+
+}
+.productcard  button{
+    width: 150px;
+    background-color: orangered;
+    color: white;
+    padding: 5px;
+    border: none;
+    font-size: 18px;
+}
+
+
+
+
+.proteins {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.proteincard{
+    width: 300px;
+    padding:11px;
+    background-color: rgb(57, 55, 55);
+    margin-inline: 80px;
+    margin-top: 24px;
+    color: black;
+    cursor: pointer;
+}
+.proteincard img{
+    width: 100%;
+
+}
+.proteincard p{
+    padding: 7px;
+
+}
+.proteincard  button{
+    width: 150px;
+    background-color: orangered;
+    color: white;
+    padding: 5px;
+    border: none;
+    font-size: 18px;
+}
+

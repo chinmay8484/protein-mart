@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fit India Protein Powder - The Best Supplement for Your Fitness Journey.">
+    <title>Fit India Protein Powder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.php">Register</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="#product">Products</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cart.html" id="view-cart">View Cart</a></li>
+                <li><a href="admin_login.php" id="view-admin">Admin Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Welcome to Fit India Protein Powder</h1>
+        <p>Browse our premium protein products to boost your fitness journey.</p>
+        <img src="Green Minimalist Case Studies Presentation.png" alt="Fit India Protein Powder">
+        <br>
+        <a href="forms.html" class="cta-button">Fill Out Our Forms to Get Started!</a>
+    </section>
+
+    <!-- Products Section -->
+    <div id="product">
+        <div class="head">
+            <h2>Our Products</h2>
+        </div>
+
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="productcard">
+                <img src="protein1.png" alt="Protein Powder">
+                <h3>Hydra Protein</h3>
+                <p>Rs.4999</p>
+                <button class="add-to-cart" onclick="addToCart('Hydra Protein', 4999)">Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="productcard">
+                <img src="protein2.png" alt="Protein Powder">
+                <h3>Ultimate Whey Protein</h3>
+                <p>Rs.3500</p>
+                <button class="add-to-cart" onclick="addToCart('Whey Protein', 3500)">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="productcard">
+                <img src="protein3.png" alt="Protein Powder">
+                <h3>Natural Protein</h3>
+                <p>Rs.3000</p>
+                <button class="add-to-cart" onclick="addToCart('Natural Protein', 3000)">Add to Cart</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="productcard">
+                <img src="protein4.jpg" alt="Protein Powder">
+                <h3>Natural Vegan Protein</h3>
+                <p>Rs.2500</p>
+                <button class="add-to-cart" onclick="addToCart('Vegan Protein', 2500)">Add to Cart</button>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="productcard">
+                <img src="musli.png" alt="Musli">
+                <h3>Musli</h3>
+                <p>Rs.2000</p>
+                <button class="add-to-cart" onclick="addToCart('Musli', 2000)">Add to Cart</button>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="productcard">
+                <img src="ashwagandha.jpg" alt="Ashwagandha">
+                <h3>Ashwagandha</h3>
+                <p>Rs.1000</p>
+                <button class="add-to-cart" onclick="addToCart('Ashwagandha', 1000)">Add to Cart</button>
+            </div>
+        </div>
+
+        <button onclick="selectProduct('Protein Powder 1', 500)">Buy Protein Powder 1</button>
+        <button onclick="selectProduct('Protein Powder 2', 700)">Buy Protein Powder 2</button>
+
+        <script>
+            function selectProduct(name, price) {
+                let product = { name: name, price: price };
+                localStorage.setItem("selectedProduct", JSON.stringify(product));
+                window.location.href = "order.html"; // Redirect to order page
+            }
+        </script>
+    </div>
+
+    <!-- BMI Calculator -->
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <div class="form-group">
+            <input type="text" placeholder="Full Name" required>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" placeholder="Enter your weight" required>
+        </div>
+        <div class="form-group">
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" placeholder="Enter your height" required>
+        </div>
+        <button onclick="calculateBMI()">Calculate BMI</button>
+
+        <div class="result" id="result">
+            <h3>Your BMI: <span id="bmiValue">0</span></h3>
+            <p id="bmiCategory"></p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <!-- About Section -->
+        <div class="text">
+            <h2>About Fit India Protein Powder</h2>
+            <p>Fit India Protein Powder is designed for athletes,<br> fitness enthusiasts, and anyone who wants to <br>improve their muscle recovery and performance.</p>
+        </div>
+        <hr>
+        <!-- Benefits Section -->
+        <div class="text">
+            <h2>Benefits of Fit India Protein Powder</h2>
+            <ul>
+                <li>Boosts muscle growth and recovery</li>
+                <li>Helps in weight management</li>
+                <li>Provides long-lasting energy</li>
+                <li>Improves overall health and immunity</li>
+            </ul>
+        </div>
+    </div>
+
+    <p>&copy; 2024 Fit India Protein Powder. All Rights Reserved.</p>
+
+    <script src="script.js"></script>
+</body>
+</html>

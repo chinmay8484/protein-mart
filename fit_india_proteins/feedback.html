@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+
+<body>
+
+<br>
+
+<div class="container">
+    <div class="feedback-form">
+        <h1>Give Your Feedback</h1>
+        
+        <form action="feedback.php" method="POST" id="feedbackForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Please provide your feedback" required></textarea>
+
+            <center><button type="submit">Submit Feedback</button></center>
+        </form>
+
+        <div class="message" id="successMessage" style="display: none;">
+            Thank you for your feedback! We appreciate your input.
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('feedbackForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Simple form validation and feedback message
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const feedback = document.getElementById('feedback').value;
+
+        if (name && email && feedback) {
+            // Submit the form using AJAX
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "feedback.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById('successMessage').style.display = 'block';
+                    document.getElementById('feedbackForm').reset(); // Clear the form fields
+                }
+            };
+            xhr.send("name=" + encodeURIComponent(name) + "&email=" + encodeURIComponent(email) + "&feedback=" + encodeURIComponent(feedback));
+        } else {
+            alert('Please fill in all fields before submitting.');
+        }
+    });
+</script>
+</body>
+</html>

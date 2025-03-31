@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h2>Checkout</h2>
+
+    <form action="place_order.php" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Address:</label>
+        <textarea name="address" required></textarea>
+
+        <input type="hidden" name="cart" id="cart-data">
+        
+        <h3 id="total-price">Total: Rs.0</h3>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+    <script>
+        window.onload = function() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById('cart-data').value = JSON.stringify(cart);
+
+            let totalPrice = cart.reduce((sum, item) => sum + item.total, 0);
+            document.getElementById('total-price').innerText = `Total: Rs.${totalPrice}`;
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #4E342E; /* Deep Brown */
+    height: 100vh;
+    color: #FAEBD7; /* Antique White */
+}
+
+header {
+    background-color: #5D4037; /* Dark Brown */
+    border: 2px solid #D7CCC8; /* Light Brown */
+    height: 130px;
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+}
+
+.container {
+    width: 45%;
+    margin: 20px auto;
+    background-color: #EFEBE9; /* Light Cream */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-form h1 {
+    margin-bottom: 18px;
+    background-color: #795548; /* Medium Brown */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #A1887F; /* Light Brown */
+    border-radius: 5px;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #5D4037; /* Dark Brown */
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 95%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #A1887F; /* Light Brown */
+    border-radius: 5px;
+    background: #FBE9E7; /* Soft Beige */
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    border-color: #6D4C41; /* Rich Brown */
+}
+
+.feedback-form button {
+    background-color: #8D6E63; /* Warm Brown */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.feedback-form button:hover {
+    background-color: #4E342E; /* Deep Brown */
+    color: white;
+}
+
+.message {
+    text-align: center;
+    color: #4E342E; /* Deep Brown */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+

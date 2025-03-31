@@ -1,0 +1,83 @@
+/* Reset some basic styling */
+body, h2, h3, table, th, td, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3e5d8; /* light beige */
+    padding: 40px;
+    color: #4e342e; /* dark brown */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading styles */
+h2 {
+    margin-bottom: 20px;
+    color: #5d4037; /* rich brown */
+    font-size: 32px;
+}
+
+/* Cart Table */
+#cart-table {
+    width: 90%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background-color: #d7ccc8; /* soft brown */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#cart-table th, #cart-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #a1887f; /* muted brown */
+}
+
+#cart-table th {
+    background-color: #8d6e63; /* brown */
+    color: white;
+    font-size: 18px;
+}
+
+#cart-table tr:last-child td {
+    border-bottom: none;
+}
+
+#cart-table tr:hover {
+    background-color: #efebe9; /* lighter brown on hover */
+}
+
+/* Total Price */
+#total-price {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #6d4c41; /* deeper brown */
+}
+
+/* Checkout Button */
+#checkout-button {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #795548; /* chocolate brown */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#checkout-button:hover {
+    background-color: #5d4037; /* darker brown */
+    transform: translateY(-2px);
+}
+
+#checkout-button:active {
+    transform: translateY(0);
+}
